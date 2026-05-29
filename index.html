@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,39 +16,57 @@
             align-items: center;
         }
         .container {
-            max-width: 800px;
+            width: 100%;
+            max-width: 1200px; /* Padidintas bendras plotis nuo 800px iki 1200px */
             background: white;
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             text-align: center;
+            box-sizing: border-box;
         }
-        h2 { color: #111; margin-bottom: 5px; }
-        p { color: #666; margin-bottom: 20px; }
-        .badge {
-            background-color: #f0f0f0;
-            padding: 20px;
+        h2 { color: #111; margin-bottom: 5px; font-size: 28px; }
+        p { color: #666; margin-bottom: 25px; font-size: 16px; }
+        
+        /* Sekcija pritaikyta dideliam ir aiškiam vaizdui */
+        .showcase-box {
+            background-color: #fcfcfc;
+            padding: 25px;
+            border: 1px solid #eaeaea;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
-        .badge img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #e0e0e0;
+        .showcase-box h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #222;
+        }
+        .image-wrapper {
+            width: 100%;
+            overflow-x: auto; /* Jei nuotrauka milžiniška, leis patogiai prasukti */
+            margin-top: 20px;
             border-radius: 6px;
-            margin-top: 15px;
+            border: 1px solid #e0e0e0;
+            background: #fff;
         }
+        .image-wrapper img {
+            display: block;
+            width: 100%; /* Priverčia nuotrauką išnaudoti visą naują platų konteinerį */
+            height: auto;
+            object-fit: contain;
+        }
+        
         .btn {
             display: inline-block;
-            background-color: #007787; /* Graži teal/mėlyna spalva */
+            background-color: #007787;
             color: white;
             text-decoration: none;
-            padding: 15px 35px;
+            padding: 18px 40px;
             font-size: 18px;
             font-weight: bold;
             border-radius: 8px;
             transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 10px rgba(0, 119, 135, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 119, 135, 0.2);
         }
         .btn:hover {
             background-color: #005f6c;
@@ -65,16 +83,19 @@
         <h2>Vinted Engineering Academy Application</h2>
         <p>Front-End Homework Project Showcase</p>
 
-        <div class="badge">
+        <div class="showcase-box">
             <h3>🎯 Expected Design (Task Assignment)</h3>
-            <p>Here is the screenshot of the requirements I was expected to fulfill:</p>
-            <img src="uzduotis.png" alt="Expected Result">
+            <p>Below is the full-size screenshot of the requirements I was expected to fulfill:</p>
+            <div class="image-wrapper">
+                <img src="uzduotis.png" alt="Expected Result">
+            </div>
         </div>
 
-        <div style="margin-top: 40px;">
+        <div style="margin-top: 40px; margin-bottom: 20px;">
             <h3>🚀 My Live Implementation</h3>
             <p>Click the button below to view my finished HTML/CSS webpage in full screen without any layout distortions:</p>
             
+            <!-- Atnaujinta nuoroda į project.html -->
             <a href="project.html" target="_blank" class="btn">Open Live Project ↗</a>
         </div>
     </div>
